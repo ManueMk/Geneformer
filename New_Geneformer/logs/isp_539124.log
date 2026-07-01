@@ -1,0 +1,11 @@
+Each start_state, goal_state, and alt_states in cell_states_to_model must be a key in state_embs_dict with the value being the state's embedding position as torch.tensor. Missing keys: ['COVID-19', 'normal']
+Mapped states for perturbation: {0: tensor([0]), 1: tensor([1])}
+Traceback (most recent call last):
+  File "/home/htc/mnakam/mnt/Geneformer/New_Geneformer/run_insilico.py", line 72, in <module>
+    isp = InSilicoPerturber(
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/in_silico_perturber.py", line 236, in __init__
+    self.validate_options()
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/in_silico_perturber.py", line 409, in validate_options
+    raise
+RuntimeError: No active exception to reraise

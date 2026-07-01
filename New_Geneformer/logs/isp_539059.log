@@ -1,0 +1,10 @@
+state_embs_dict must be provided for mode with cell_states_to_model. Format is dictionary with keys specifying each possible cell state to model. Values are target embedding positions as torch.tensor.
+Traceback (most recent call last):
+  File "/home/htc/mnakam/mnt/Geneformer/New_Geneformer/run_insilico.py", line 39, in <module>
+    isp = InSilicoPerturber(
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/in_silico_perturber.py", line 236, in __init__
+    self.validate_options()
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/in_silico_perturber.py", line 384, in validate_options
+    raise
+RuntimeError: No active exception to reraise

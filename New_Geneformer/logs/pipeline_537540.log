@@ -1,0 +1,24 @@
+Starting Job...
+Using Python: /home/htc/mnakam/miniforge3/envs/geneformer_311/bin/python
+Searching in: /home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages
+/home/htc/mnakam/mnt/Geneformer/New_Geneformer/run_classifier.py:62: FutureWarning: The method concatenate is deprecated and will be removed in the future. Use anndata.concat instead of AnnData.concatenate. See the tutorial for concat at: https://anndata.readthedocs.io/en/latest/concatenation.html
+  adata_small = covid.concatenate(normal)
+--- Step 1: Preprocessing with Scanpy ---
+Saved processed data to data/covid_monocytes_2k.h5ad
+--- Step 2: Tokenizing ---
+Tokenizing data/covid_monocytes_2k.h5ad
+Traceback (most recent call last):
+  File "/home/htc/mnakam/mnt/Geneformer/New_Geneformer/run_classifier.py", line 79, in <module>
+    tk.tokenize_data("data/", TOKEN_OUT_DIR, TOKEN_PREFIX, file_format="h5ad")
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/tokenizer.py", line 466, in tokenize_data
+    tokenized_cells, cell_metadata, tokenized_counts = self.tokenize_files(
+                                                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/tokenizer.py", line 503, in tokenize_files
+    file_tokenized_cells, file_cell_metadata, file_tokenized_counts = tokenize_file_fn(file_path, file_format=file_format)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/tokenizer.py", line 522, in tokenize_anndata
+    adata = sum_ensembl_ids(
+            ^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/tokenizer.py", line 226, in sum_ensembl_ids
+    "n_counts" in data.obs.columns
+AssertionError: 'n_counts' column missing from data.obs

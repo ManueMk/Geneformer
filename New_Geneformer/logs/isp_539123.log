@@ -1,0 +1,27 @@
+/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/table.py:1421: FutureWarning: promote has been superseded by promote_options='default'.
+  table = cls._concat_blocks(blocks, axis=0)
+Mapped states for perturbation: {'normal': tensor([0]), 'COVID-19': tensor([1])}
+--- Starting In Silico Perturbation ---
+Traceback (most recent call last):
+  File "/home/htc/mnakam/mnt/Geneformer/New_Geneformer/run_insilico.py", line 73, in <module>
+    isp.perturb_data(
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/in_silico_perturber.py", line 495, in perturb_data
+    filtered_input_data = self.apply_additional_filters(filtered_input_data)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/in_silico_perturber.py", line 520, in apply_additional_filters
+    filtered_input_data = pu.filter_data_by_start_state(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/perturber_utils.py", line 76, in filter_data_by_start_state
+    state_values = filtered_input_data[state_key]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 2803, in __getitem__
+    return self._getitem(key)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 2787, in _getitem
+    pa_subtable = query_table(self._data, key, indices=self._indices if self._indices is not None else None)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/formatting/formatting.py", line 580, in query_table
+    _check_valid_column_key(key, table.column_names)
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/formatting/formatting.py", line 520, in _check_valid_column_key
+    raise KeyError(f"Column {key} not in the dataset. Current columns in the dataset: {columns}")
+KeyError: "Column disease not in the dataset. Current columns in the dataset: ['input_ids', 'cell_type', 'label', 'donor_id', 'length']"

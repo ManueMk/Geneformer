@@ -1,0 +1,11 @@
+Starting Job...
+Using Python: /home/htc/mnakam/miniforge3/envs/geneformer_311/bin/python
+Searching in: /home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages
+Traceback (most recent call last):
+  File "/home/htc/mnakam/mnt/Geneformer/New_Geneformer/run_classifier.py", line 10, in <module>
+    from datasets import load_from_disk
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/__init__.py", line 22, in <module>
+    from .arrow_dataset import Dataset
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 59, in <module>
+    import pyarrow as pa
+ModuleNotFoundError: No module named 'pyarrow'

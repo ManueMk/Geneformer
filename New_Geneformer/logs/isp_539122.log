@@ -1,0 +1,11 @@
+Mapped states for perturbation: {'normal': tensor([0]), 'COVID-19': tensor([1])}
+--- Starting In Silico Perturbation ---
+/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/datasets/table.py:1421: FutureWarning: promote has been superseded by promote_options='default'.
+  table = cls._concat_blocks(blocks, axis=0)
+Emb mode 'cls' or 'cls_and_gene' required when first token is <cls>.
+Traceback (most recent call last):
+  File "/home/htc/mnakam/mnt/Geneformer/New_Geneformer/run_insilico.py", line 71, in <module>
+    isp.perturb_data(
+  File "/home/htc/mnakam/miniforge3/envs/geneformer_311/lib/python3.11/site-packages/geneformer/in_silico_perturber.py", line 485, in perturb_data
+    raise
+RuntimeError: No active exception to reraise
